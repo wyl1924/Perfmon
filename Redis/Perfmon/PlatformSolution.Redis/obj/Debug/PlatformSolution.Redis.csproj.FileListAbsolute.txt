@@ -1,0 +1,11 @@
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\bin\Debug\PlatformSolution.Redis.dll
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\bin\Debug\PlatformSolution.Redis.pdb
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\bin\Debug\ServiceStack.Interfaces.dll
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\bin\Debug\ServiceStack.Redis.dll
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\bin\Debug\ServiceStack.Text.dll
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\bin\Debug\ServiceStack.Common.dll
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\bin\Debug\ServiceStack.Redis.pdb
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\bin\Debug\ServiceStack.Text.xml
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\bin\Debug\ServiceStack.Common.xml
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\obj\Debug\PlatformSolution.Redis.dll
+G:\synjones\svn\hierarchicalplatform\HierarchicalPlatform\Redis\Perfmon\PlatformSolution.Redis\obj\Debug\PlatformSolution.Redis.pdb

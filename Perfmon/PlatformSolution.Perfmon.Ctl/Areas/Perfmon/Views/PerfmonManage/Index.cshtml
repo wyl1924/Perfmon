@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PlatformSolution.Perfmon.Api.PerfmonModel>
+<link href="/Content/themes/css/reset.css" rel="stylesheet" />
+<table id="report">
+    <thead>
+        <tr>
+            <th style="width: 160px;" class="right">模块名称 </th>
+            <th style="width: 160px;" class="right">模块编码 </th>
+            <th style="width: 100px;" class="right">当前执行人数</th>
+            <th style="width: 100px;" class="right">最多执行人数</th>
+            <th style="width: 160px;" class="right">编辑</th>
+            <th style="width: 200px;" class="right">提交修改</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count() > 0)
+        {
+            for (int j = 0; j < Model.Count() - 1; j++)
+            {
+                var model = Model[j];                                 
+            <tr 
+                     @if (j % 2 == 1)
+                     {
+                       <text> class="odd" </text>
+                     }
+                     >
+                <td>@(model.name)</td>
+                <td>@(model.code)</td>
+                <td>@(model.nowTimes)</td>
+                <td  id="maxTimes_@(j)">@(model.maxTimes)</td>
+                <td style="display: none;">
+                    <input id="txtmaxTimes_@(j)" type="text" value="@(model.dueFee)" style="width:100px;height:28px;text-align:right;"/>
+                    元</td>
+                <td>
+                    <input class="btn-edit"  type="button" num="@(j)" onclick="editMaxtimes(this); return false;" value="编辑最大人数" />
+                </td>
+                <td>
+                    <input type="button" no="@(j)" class="btn-submit"  style="cursor:pointer; "  value="提交" name="@(model.name)" code="@(model.code)" nowTimes="@(model.nowTimes)"  maxTimes="@(model.maxTimes)" onclick="doMaxtimes(this); return false;"/>
+            </tr>
+            }
+        }
+    </tbody>
+</table>
+<script>
+    function editMaxtimes(curren) {
+        var num = $(curren).attr("num");
+        var txtmoney = $("#txtmaxTimes_" + num);
+        if (txtmoney != undefined && txtmoney.length > 0) {
+            $("#txtmaxTimes_" + num).parent().show();
+            $("#maxTimes_" + num).hide();
+        }
+    }
+    function doMaxtimes(curren) {
+        var name = $(curren).attr("name");
+        var code = $(curren).attr("code");
+        var nowTimes = $(curren).attr("nowTimes");
+        var maxTimes = $(curren).attr("maxTimes");
+        $(curren).val("已提交");
+        $(curren).attr("disabled", "disabled");
+        $(curren).attr("cursor", "");
+        $.post("/Perfmon/PerfmonManage/SetMaxTimes", { name: name, code: code, maxTimes: maxTimes }, function (data) {
+            if (!data.ret) {
+                alert(data.msg);
+            }
+        })
+    }
+</script>
